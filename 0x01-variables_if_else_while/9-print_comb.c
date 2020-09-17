@@ -17,7 +17,7 @@ int main(void)
 		{
 			putchar(i);
 			putchar(j);
-			if ((i+j) == ('9'+'9'))
+			if ((i + j) == ('9' + '9'))
 				continue;
 			else
 			{
