@@ -1,7 +1,7 @@
-#include "_putchar.c"
+#include "holberton.h"
 
 /**
-* Main - pritns "Holberton" to the terminal
+* Main - prints "Holberton" to the terminal
 *
 * Return: On success 0.
 */
