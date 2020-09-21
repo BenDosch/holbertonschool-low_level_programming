@@ -1,12 +1,12 @@
-#include "_putchar.c"
+#include "holberton.h"
 
 /**
-* Main - prints alpahbet lower a-z followed by a newline.
+* print_alphabet_x10 - prints alpahbet lower a-z followed by a newline.
 *
 * Return: On success 0.
 */
 
-int main(void)
+void print_alphabet_x10(void)
 {
 	char ch;
 	int i;
@@ -16,5 +16,4 @@ int main(void)
 			_putchar(ch);
 		_putchar('\n');
 	}
-	return (0);
 }
