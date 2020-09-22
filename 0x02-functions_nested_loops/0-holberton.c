@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-* Main - prints "Holberton" to the terminal
+* main - prints "Holberton" to the terminal
 *
 * Return: On success 0.
 */
