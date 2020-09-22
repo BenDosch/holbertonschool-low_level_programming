@@ -24,7 +24,7 @@ void times_table(void)
 				_putchar(tens);
 				_putchar(ones);
 			}
-			else if (tens == '0' && (i * (j + 1)) / 10 != 0 )
+			else if (tens == '0' && (i * (j + 1)) / 10 != 0)
 			{
 				_putchar(ones);
 				_putchar(',');
