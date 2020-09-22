@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * isalpha - checks for alphabetic character.
+ * _isalpha - checks for alphabetic character.
  *
  * Return: 1 for if alpha, 0 if not.
  */
