@@ -1,4 +1,4 @@
-1#include "holberton.h"
+#include "holberton.h"
 
 /**
  * print_triangle - print right angle triangel b * h of size
