@@ -1,4 +1,4 @@
-#include "holberton.h"
+1#include "holberton.h"
 
 /**
  * print_triangle - print right angle triangel b * h of size
@@ -16,7 +16,7 @@ void print_triangle(int size)
 	{
 		for (row = 1; row <= size; row++)
 		{
-			for (col = 0; col <= (size - row); col++)
+			for (col = 1; col <= (size - row); col++)
 			{
 				_putchar(' ');
 			}
