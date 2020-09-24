@@ -9,9 +9,10 @@
 
 int  main(void)
 {
-	long long int num, fac, maxfac;
+	unsigned long int num, fac, maxfac;
 
-	num = 612852475143
+	num = 612852475143;
+
 	if (num >= 0)
 	{
 		for (fac = 2; num / maxfac == 1;)
@@ -26,7 +27,7 @@ int  main(void)
 				num = num / fac;
 			}
 		}
-		printf("%lld\n", maxfac);
+		printf("%uld\n", maxfac);
 	}
 	return (0);
 }
