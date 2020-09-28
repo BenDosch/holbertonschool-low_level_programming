@@ -15,7 +15,7 @@ int main(void)
 	second = 2;
 
 	printf("1, 2");
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 48; i++)
 	{
 		fib = first + second;
 		first = second;
