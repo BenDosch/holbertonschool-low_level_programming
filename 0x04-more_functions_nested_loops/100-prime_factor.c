@@ -9,25 +9,30 @@
 
 int  main(void)
 {
-	unsigned long int num, fac, maxfac;
+	long int num, fac, tem, maxfac;
 
 	num = 612852475143;
 
+
 	if (num >= 0)
 	{
-		for (fac = 2; num / maxfac == 1;)
+		for (fac = 2; fac <= num; fac++)
 		{
-			if (num % fact != 0)
+			maxfac = fac;
+
+			if (fac == num)
+				break;
+			else if	(num % fac == 0)
 			{
-				fac++;
-			}
-			else
-			{
-				maxfac = fac;
-				num = num / fac;
+				tem = fac;
+				while (( num != tem) && (num % tem == 0))
+				{
+					num = num / tem;
+					printf("num = %ld\n", num);
+				}
 			}
 		}
-		printf("%uld\n", maxfac);
+		printf("%ld\n", maxfac);
 	}
 	return (0);
 }
