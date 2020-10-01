@@ -9,15 +9,18 @@
 char *rot13(char *s)
 {
 	int i, j;
-	char al[] = "ABCDEFGHIJKLMNOPQURSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char r13[] = "NOPQURSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char al[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char r13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; j < 52; j++)
+		{
 			if (s[i] == al[j])
 				s[i] = r13[j];
+			break;
+		}
 	}
 	return (s);
 }
