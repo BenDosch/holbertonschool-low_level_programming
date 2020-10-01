@@ -10,29 +10,17 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int len_dest;
 	int i;
 
-/*Find len of dest*/
-	for (i = 0; dest[i] != '\0'; i++)
-	{}
-	len_dest = i;
-
-/*Test that len_dest >= n*/
-	if (len_dest >= n)
-	{
-
 /*Copy n bytes of src to dest*/
-		for (i = 0; (i < n && src[i] != '\0'); i++)
-		{
-			dest[i] = src[i];
-		}
-		if (i < n && src[i] == '\0')
-		{
-			dest[i] = src[i];
-		}
+	for (i = 0; (i < n && src[i] != '\0'); i++)
+	{
+		dest[i] = src[i];
 	}
-
+	for (; i < n; i++)
+	{
+		dest[i] = '\0';
+	}
 /*Retun pointer to dest*/
 	return (dest);
 }
