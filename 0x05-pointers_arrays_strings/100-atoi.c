@@ -21,14 +21,14 @@ int _atoi(char *s)
 		}
 		if (numstart == 0)
 		{
-			if ((*(s + i) >= '0') && (*(s +i) <= '9'))
+			if ((*(s + i) >= '0') && (*(s + i) <= '9'))
 			{
 				numstart = i;
 				break;
 			}
 		}
 	}
-	for(; (s[numstart] >= '0') && (s[numstart] <= '9'); numstart++)
+	for (; (s[numstart] >= '0') && (s[numstart] <= '9'); numstart++)
 	{
 		if ((ret <= 9) && (ret >= 0))
 		{
@@ -44,5 +44,5 @@ int _atoi(char *s)
 			ret += (s[numstart] - '0');
 		}
 	}
-	return(ret);
+	return (ret);
 }
