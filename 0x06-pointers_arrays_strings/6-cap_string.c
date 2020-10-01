@@ -31,7 +31,6 @@ char *cap_string(char *s)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		p = s[i - 1];
-
 /*test if element is the first letter of a new word*/
 		for (j = 0; j < 13; j++)
 		{
@@ -48,6 +47,5 @@ char *cap_string(char *s)
 			}
 		}
 	}
-/*Return pointer to string*/
 	return (s);
 }
