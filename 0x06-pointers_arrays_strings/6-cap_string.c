@@ -41,6 +41,11 @@ char *cap_string(char *s)
 				s[i] -= to_upper;
 				break;
 			}
+			else if (s[i] >= 'a' && s[i] <= 'z' && i == 0)
+			{
+				s[i] -= to_upper;
+				break;
+			}
 		}
 	}
 /*Return pointer to string*/
