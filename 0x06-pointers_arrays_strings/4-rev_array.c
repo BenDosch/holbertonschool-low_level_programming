@@ -13,7 +13,7 @@ void reverse_array(int *a, int n)
 	int tem;
 
 /*Loop through half of the array*/
-	for (i = 0; i <= (n - 1) / 2; i++)
+	for (i = 0; i <= (n - 1) / 2 && n != 0; i++)
 	{
 /*Store lower value in tem and assign swaped values*/
 		tem = a[i];
