@@ -11,7 +11,7 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int fd, bd = 0;
+	long int fd, bd = 0;
 
 	if (size <= 0)
 		printf("0, 0\n");
@@ -21,5 +21,5 @@ void print_diagsums(int *a, int size)
 		fd += *(a + ((i * size) + i));
 		bd += *(a + ((i * size) + (size - 1 - i)));
 	}
-	printf("%d, %d\n", fd ,bd);
+	printf("%ld, %ld\n", fd ,bd);
 }
