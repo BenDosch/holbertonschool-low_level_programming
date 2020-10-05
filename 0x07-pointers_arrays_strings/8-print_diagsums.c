@@ -15,11 +15,13 @@ void print_diagsums(int *a, int size)
 
 	if (size <= 0)
 		printf("0, 0\n");
-
-	for (i = 0; i < size; i++)
+	else
 	{
-		fd += *(a + ((i * size) + i));
-		bd += *(a + ((i * size) + (size - 1 - i)));
+		for (i = 0; i < size; i++)
+		{
+			fd += *(a + ((i * size) + i));
+			bd += *(a + ((i * size) + (size - 1 - i)));
+		}
+		printf("%ld, %ld\n", fd ,bd);
 	}
-	printf("%ld, %ld\n", fd ,bd);
 }
