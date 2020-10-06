@@ -15,6 +15,8 @@ void print_diagsums(int *a, int size)
 
 	if (size <= 0)
 		printf("0, 0\n");
+	else if (size == 1)
+		printf("%ld, %ld\n", size, size);
 	else
 	{
 		for (i = 0; i < size; i++)
