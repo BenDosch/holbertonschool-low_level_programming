@@ -23,6 +23,6 @@ void print_diagsums(int *a, int size)
 			fd += *(a + ((i * size) + i));
 			bd += *(a + ((i * size) + (size - 1 - i)));
 		}
-		printf("%ld, %ld\n", fd, bd);
+		printf("%d, %d\n", fd, bd);
 	}
 }
