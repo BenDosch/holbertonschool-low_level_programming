@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -11,7 +11,8 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	long int fd, bd = 0;
+	int fd = 0;
+	int bd = 0;
 
 	if (size <= 0)
 		printf("0, 0\n");
