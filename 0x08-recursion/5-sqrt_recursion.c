@@ -18,8 +18,8 @@ int test_root(int n, int x)
 		x = test_root(n, x);
 		return (x);
 	}
-
-	return (-1);
+	else
+		return (-1);
 }
 
 /**
