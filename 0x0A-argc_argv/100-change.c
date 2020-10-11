@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - checks to see the minimum number of coins to make change
+ * @argc: number of arguments
+ * @argv: change to check
+ * Return: 1 if error, 0 if sucess
+ */
+
 int main(int argc, char *argv[])
 {
 	int change;
