@@ -1,9 +1,10 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
-	int change = atoi(argv[1]);
+	int change;
 	int coins = 0;
 
 /*check for write number of arguments*/
@@ -12,8 +13,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else if (change <= 0)
-		print("0\n");
+	change = atoi(argv[1]);
+	if (change <= 0)
+		printf("0\n");
 	else
 /*check coins*/
 	{
@@ -30,7 +32,7 @@ int main(int argc, char *argv[])
 		while(change >= 5)
 		{
 			change -= 5;
-			coints += 1;
+			coins += 1;
 		}
 		while(change >= 2)
 		{
@@ -40,9 +42,9 @@ int main(int argc, char *argv[])
 		while(change >= 1)
 		{
 			change -= 1;
-			coints += 1;
+			coins += 1;
 		}
 		printf("%d\n", coins);
 	}
-	return (0)
+	return (0);
 }
