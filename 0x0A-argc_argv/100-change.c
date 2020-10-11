@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
 	int change;
 	int coins = 0;
 
-/*check for write number of arguments*/
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -23,35 +22,32 @@ int main(int argc, char *argv[])
 	change = atoi(argv[1]);
 	if (change <= 0)
 		printf("0\n");
-	else
-/*check coins*/
+	while (change >= 25)
 	{
-		while(change >= 25)
-		{
-			change -= 25;
-			coins += 1;
-		}
-		while(change >= 10)
-		{
-			change -= 10;
-			coins += 1;
-		}
-		while(change >= 5)
-		{
-			change -= 5;
-			coins += 1;
-		}
-		while(change >= 2)
-		{
-			change -= 2;
-			coins += 1;
-		}
-		while(change >= 1)
-		{
-			change -= 1;
-			coins += 1;
-		}
-		printf("%d\n", coins);
+		change -= 25;
+		coins += 1;
+	}
+	while (change >= 10)
+	{
+		change -= 10;
+		coins += 1;
+	}
+	while (change >= 5)
+	{
+		change -= 5;
+		coins += 1;
+	}
+	while (change >= 2)
+	{
+		change -= 2;
+		coins += 1;
+	}
+	while (change >= 1)
+	{
+		change -= 1;
+		coins += 1;
+	}
+	printf("%d\n", coins);
 	}
 	return (0);
 }
