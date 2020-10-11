@@ -20,8 +20,6 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	change = atoi(argv[1]);
-	if (change <= 0)
-		printf("0\n");
 	while (change >= 25)
 	{
 		change -= 25;
@@ -47,6 +45,6 @@ int main(int argc, char *argv[])
 		change -= 1;
 		coins += 1;
 	}
-	printf("%d\n", coins);
+	printf("%d\n", coins = change < 0 ? 0 : coins);
 	return (0);
 }
