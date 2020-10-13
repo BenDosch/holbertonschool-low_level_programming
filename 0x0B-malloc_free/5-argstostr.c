@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
+ * argstostr - concatonates agrumets with newlines
+ * @ac: argc
+ * @av: argv
+ * Return: pointer to new string, else NULL
  */
 
 char *argstostr(int ac, char **av)
