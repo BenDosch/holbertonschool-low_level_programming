@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 	{}
 	if (*s1 == 0)
 		len1 = 0;
-	if(*s2 == 0)
+	if (*s2 == 0)
 		len2 = 1;
 	combo = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (combo == NULL)
