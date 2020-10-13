@@ -13,7 +13,12 @@ int main(int argc, char *argv[])
 {
 	int sum;
 
-	sum = atoi(argv[argc - 1]) + atoi(argv[argc - 2]);
+	if (argc !=  3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	sum = atoi(argv[argc - 1]) * atoi(argv[argc - 2]);
 	printf("%d\n", sum);
 	return (0);
 }

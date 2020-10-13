@@ -2,10 +2,11 @@
 
 /**
  * _strspn - returns the number of bytes from start to the first none included
- * in accept
+ * char in accept
  * @s: string to check
  * @accept: acceptable charactgers
- * Return: distance s is within accept
+ * Retrun: distance s is within accept
+>>>>>>> 61ef9c11cec236536c169c462962fd7c74aea9ca
  */
 
 unsigned int _strspn(char *s, char *accept)
