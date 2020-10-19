@@ -1,4 +1,4 @@
-B#include "dog.h"
+#include "dog.h"
 #include <stdlib.h>
 
 /**
@@ -6,6 +6,7 @@ B#include "dog.h"
  * @d: pointer to a dog structure
  * Return: none
  */
+
 void free_dog(dog_t *d)
 {
 	if (d != NULL)
