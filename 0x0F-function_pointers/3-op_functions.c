@@ -9,7 +9,7 @@
 
 int op_add(int a, int b)
 {
-	return(a + b);
+	return (a + b);
 }
 
 /**
@@ -21,7 +21,7 @@ int op_add(int a, int b)
 
 int op_sub(int a, int b)
 {
-	return(a - b);
+	return (a - b);
 }
 
 /**
@@ -33,7 +33,7 @@ int op_sub(int a, int b)
 
 int op_mul(int a, int b)
 {
-	return(a * b);
+	return (a * b);
 }
 
 /**
@@ -45,11 +45,11 @@ int op_mul(int a, int b)
 
 int op_div(int a, int b)
 {
-	return(a / b);
+	return (a / b);
 }
 
 /**
- * op_ - returns the remainder of a devided by b
+ * op_mod - returns the remainder of a devided by b
  * @a: first int
  * @b: second int
  * Return: remainder of a % b
@@ -57,5 +57,5 @@ int op_div(int a, int b)
 
 int op_mod(int a, int b)
 {
-	return(a % b);
+	return (a % b);
 }
