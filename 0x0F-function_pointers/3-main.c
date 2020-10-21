@@ -18,8 +18,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+	printf("checked arguments\n");
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
+	printf("before op\n");
 	op = *(argv[2]);
 	if (num2 == 0 && (op == '/' || op == '%'))
 	{
@@ -27,7 +29,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	ret = get_op_func(argv[2]);
-	if (ret == NULL)
+	if (!ret)
 	{
 		printf("Error\n");
 		exit(99);
