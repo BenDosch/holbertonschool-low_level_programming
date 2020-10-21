@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stddef.h>
 
 /**
  * int_index - passes each element of array to cmp and returns the # of the\
