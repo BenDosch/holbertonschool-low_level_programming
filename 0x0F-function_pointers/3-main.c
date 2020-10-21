@@ -4,7 +4,7 @@
  * main - prefoms a simple opperation on 2 numbers
  * @argc: number of arugments passed to main
  * @argv: array of arguments passed to main
- * return: none
+ * Return: none
  */
 
 int main(int argc, char *argv[])
