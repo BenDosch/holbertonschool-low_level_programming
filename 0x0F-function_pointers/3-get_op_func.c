@@ -22,7 +22,6 @@ int (*get_op_func(char *s))(int, int)
 	while (i < 5 && *(ops[i].op) != *s)
 	{
 		i++;
-		printf("%d\n", i);
 	}
 	if (i == 5)
 		return (NULL);
