@@ -9,19 +9,21 @@
 size_t print_list(const list_t *h)
 {
 	unsigned long int i;
+	list_t *current = (list_t*)h;
 
-	if (h->next == NULL)
+	if (h == NULL)
 		return (0);
-	for (i = 0; h->next == NULL; i++, h = h->next)
+	for (i = 1; current->next != NULL; i++)
 	{
-		if (h->str == NULL)
+		if (current->str == NULL)
 			printf("[0] (nil)\n");
 		else
-			printf("[%u] %s\n", h->len, h->str);
+			printf("[%u] %s\n", current->len, current->str);
+		current = current->next;
 	}
-	if (h->str == NULL)
+	if (current->str == NULL)
 		printf("[0] (nil)\n");
 	else
-		printf("[%lu] %s\n", h->len, h->str);
+		printf("[%u] %s\n", current->len, current->str);
 	return (i);
 }
