@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
+ * print_binary - prints a binary representation of an unsigned long int
+ * @n: number to print
+ * Return: none
  */
 
 void print_binary(unsigned long int n);
