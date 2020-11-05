@@ -4,7 +4,7 @@
  * clear_bit - temp
  * @n: number
  * @index: index
- * Return new num or -1 if fail
+ * Return: new num or -1 if fail
  */
 
 int clear_bit(unsigned long int *n, unsigned int index)
@@ -21,5 +21,5 @@ int clear_bit(unsigned long int *n, unsigned int index)
 			base2 *= 2;
 		*n -= base2;
 	}
-	return (*n);
+	return (1);
 }
