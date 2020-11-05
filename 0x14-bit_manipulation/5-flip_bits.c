@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * flip_bits - returns the number of bits that need be change to 
+ * flip_bits - returns the number of bits that need be change to
  * make the numbers the same
  * @n: first number
  * @m: second number
@@ -12,7 +12,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	int sum = 0;
 
-	while(n || m)
+	while (n || m)
 	{
 		if ((n & 1) ^ (m & 1))
 			sum++;
