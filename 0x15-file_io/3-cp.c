@@ -18,10 +18,10 @@ int main(int argc, const char *argv[])
 		exit(97);
 	}
 	fd1 = open(file_from, O_RDONLY);
-	fd2 = open(file_to, O_RDWR | O_CREAT |O_TRUNC, 00664);
-	if ( fd1 == -1)
+	fd2 = open(file_to, O_RDWR | O_CREAT | O_TRUNC, 00664);
+	if (fd1 == -1)
 	{
-	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from );
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 	exit(98);
 	}
 	if (fd2 == -1 || copy(fd1, fd2) == -1)
@@ -56,7 +56,7 @@ int copy(int fd1, int fd2)
 	int shift = 1;
 	char *buf = malloc(sizeof(char) * bsize);
 
-	while(shift > 0)
+	while (shift > 0)
 	{
 
 		shift = read(fd1, buf, bsize);
