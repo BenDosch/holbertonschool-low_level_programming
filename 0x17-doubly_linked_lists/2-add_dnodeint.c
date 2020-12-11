@@ -5,7 +5,7 @@
  * doublly linked list
  * @head: Head of list
  * @n: Number to store in Node
- * Return: pointer to new node, NULL on fail
+ * Return: Address of new node, NULL on fail
  */
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
