@@ -13,26 +13,30 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	dlistint_t *new, *current;
 
 	new = malloc(sizeof(dlistint_t));
-	if (!new)
+	if (new == NULL)
 		return (NULL);
 	printf("malloc sucess\n");
 	new->n = n;
 	new->next = NULL;
 	new->prev = NULL;
 	printf("next initialized\n");
-	if (!head)
+	if (*head)
 	{
-		*head = new;
+		printf("before current set\n");
+		printf("before loop\n");
+		current = *head;
+		while (current->next != NULL)
+		{
+			printf("node value: %d\n",current->n);
+			current = current->next;
+		}
+		current->next = new;
+		new->prev = current;
 	}
 	else
 	{
-		printf("before current set\n");
-		current = (dlistint_t *)head;
-		printf("before loop\n");
-		while (!current->next)
-			current = current->next; printf("in loop\n");
-		current->next = new;
-		new->prev = current;
+		*head = new;
+		printf("head set to new\n");
 	}
 	printf("before return: n = %d\n", n);
 	return (new);
