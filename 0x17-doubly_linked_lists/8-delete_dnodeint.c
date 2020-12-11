@@ -17,10 +17,16 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		if (i == index)
 		{
-			(current->next)->prev = current->prev;
-			printf("cnp: %d\n", current->next->prev->n);
-			(current->prev)->next = current->next;
-			printf("cpn: %d\n", current->prev->next->n);
+			if (current->next)
+				(current->next)->prev = current->prev;
+			else if (!(current->next) && current->prev)
+				current->prev->next = NULL;
+			if (current->prev)
+				(current->prev)->next = current->next;
+			else if (!(current->prev) && current->next)
+				*head = current->next;
+			if (!(current->next) && !(current->prev))
+				*head = NULL;
 			free(current);
 			return (1);
 		}
