@@ -20,6 +20,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (new);
 
 	}
+	if (!current)
+		return(NULL);
 	for (i = 0; current->next != NULL && i < idx; i++)
 	{
 
