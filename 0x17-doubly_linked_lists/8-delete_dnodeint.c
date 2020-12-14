@@ -13,6 +13,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *current = *head;
 	unsigned int i;
 
+	if (!head || !current)
+		return (-1);
 	for (i = 0; current != NULL && i <= index; i++)
 	{
 		if (i == index)
@@ -31,7 +33,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			return (1);
 		}
 		current = current->next;
-		printf("node: %d\n", current->n);
 	}
 	return (-1);
 }
