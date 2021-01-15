@@ -5,7 +5,7 @@
  *
  * @ht: hash table to use
  *
- * Return: NULL on fail
+ * Return: none
  */
 
 void hash_table_print(const hash_table_t *ht)
@@ -16,10 +16,7 @@ void hash_table_print(const hash_table_t *ht)
 
 
 	if (ht == NULL)
-	{
-		printf("{}\n");
 		return;
-	}
 
 	bins = ht->array;
 
