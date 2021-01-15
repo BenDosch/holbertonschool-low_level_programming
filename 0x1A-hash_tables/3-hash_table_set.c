@@ -30,17 +30,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_ele->next = NULL;
 
 	if (bins[index] == NULL)
-	{
 		bins[index] = new_ele;
-		return (1);
-	}
 	else
 	{
 		for (cur =  bins[index]; cur != NULL; cur = cur->next)
 		{
-			if (cur->key == new_ele->key)
+			if (!(strcmp(cur->key, key)))
 			{
-				cur->value = new_ele->value;
+				cur->value = strdup(value);
 				free(new_ele);
 				return (1);
 			}
