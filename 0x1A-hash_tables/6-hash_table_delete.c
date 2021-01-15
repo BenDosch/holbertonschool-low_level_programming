@@ -15,6 +15,9 @@ void hash_table_delete(hash_table_t *ht)
 
 	bins = ht->array;
 
+	if (ht == NULL)
+		return;
+
 	for (i = 0; i < ht->size; i++)
 	{
 		for (cur = bins[i]; cur != NULL;)
@@ -25,6 +28,7 @@ void hash_table_delete(hash_table_t *ht)
 			free(last->value);
 			free(last);
 		}
+
 	}
 	free(bins);
 	free(ht);
