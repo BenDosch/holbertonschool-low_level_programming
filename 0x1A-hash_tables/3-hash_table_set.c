@@ -13,8 +13,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t **bins, *cur;
-	hash_node_t *new_ele;
+	hash_node_t **bins, *cur, *new_ele;
 
 	if (ht == NULL || key == NULL || strcmp(key, "") == 0 || value == NULL)
 		return (0);
