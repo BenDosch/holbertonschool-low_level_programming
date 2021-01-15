@@ -10,8 +10,9 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t **bins, *cur;
+	hash_node_t **bins, *cur = NULL;
 	unsigned long int i;
+	int first = 1;
 
 
 	if (ht == NULL)
@@ -26,7 +27,13 @@ void hash_table_print(const hash_table_t *ht)
 	for (i = 0; i < ht->size; i++)
 	{
 		for (cur = bins[i]; cur != NULL; cur = cur->next)
+		{
+			if (first == 0)
+				printf(", ");
 			printf("\'%s\': \'%s\'", cur->key, cur->value);
+			first = 0;
+
+		}
 	}
 	printf("}\n");
 
