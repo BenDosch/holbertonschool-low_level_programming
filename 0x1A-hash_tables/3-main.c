@@ -17,7 +17,7 @@ int main(void)
 	ht = hash_table_create(1024);
 	key = "betty";
 	value = "holberton";
-	hash_table_set(ht, key, value);
-	printf("%s added at %s\n", value, key);
+	if (hash_table_set(ht, key, value))
+		printf("%s added at %s\n", value, key);
 	return (EXIT_SUCCESS);
 }
