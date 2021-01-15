@@ -44,6 +44,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		free(new_ele);
 		free(new_ele->key);
+		return (0);
 	}
 	new_ele->next = bins[index];
 	bins[index] = new_ele;
