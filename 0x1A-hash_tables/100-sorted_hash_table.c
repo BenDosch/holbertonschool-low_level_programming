@@ -125,7 +125,7 @@ shash_node_t *key_position(shash_node_t *head, const char *key)
 {
 	shash_node_t *current = head;
 
-	while(current)
+	while (current)
 	{
 		if (current->next == NULL)
 		{
