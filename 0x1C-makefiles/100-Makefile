@@ -6,18 +6,15 @@ CC = gcc
 SRC = $(wildcard *.c)
 OBJ = main.o holberton.o
 NAME = holberton
-RM = rm -f
-CFLAGS = -Wall -Werror -Wextra -pedantic
+CFLAGS = -Wall -Werror -Wextra -pedantic -g -c
+
+.PHONY: all re clean oclean fclean
 
 #Rules
-all: $(OBJ) 
+all: $(OBJ) m.h
 	$(CC) $? -o $(NAME)
 
-$(OBJ): %.o: %.c
-	$(CC) -c $(CFLAGS) $< -o $@
-
 re: oclean all
-
 
 #Cleaners
 
