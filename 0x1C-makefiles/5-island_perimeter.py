@@ -14,7 +14,7 @@ def island_perimeter(grid):
                         perimiter += 1
                 else:
                     perimiter += 1
-                if i != len(grid):
+                if i != len(grid) - 1:
                     if not grid[i + 1][j]:
                         perimiter += 1
                 else:
@@ -24,7 +24,7 @@ def island_perimeter(grid):
                         perimiter += 1
                 else:
                     perimiter += 1
-                if j != len(grid[i]):
+                if j != len(grid[i]) - 1:
                     if not grid[i][j + 1]:
                         perimiter += 1
                 else:
