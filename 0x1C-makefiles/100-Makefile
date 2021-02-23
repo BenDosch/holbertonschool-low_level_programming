@@ -3,7 +3,7 @@
 #Variables
 
 CC = gcc
-SRC = main.c holberton.c
+SRC = main.c holberton.c m.h
 OBJ = $(SRC:.c=.o)
 NAME = holberton
 CFLAGS = -Wall -Werror -Wextra -pedantic -g
@@ -11,8 +11,8 @@ CFLAGS = -Wall -Werror -Wextra -pedantic -g
 .PHONY: all re clean oclean fclean
 
 #Rules
-all: $(OBJ) m.h
-	$(CC) $(OBJ) -o $(NAME)
+all: $(OBJ)
+	$(CC) $(SRC) -o $(NAME)
 
 re: fclean all
 
