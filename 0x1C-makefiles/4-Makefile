@@ -4,17 +4,16 @@
 
 CC = gcc
 SRC = $(wildcard *.c)
-OBJ = main.o holberton.o
+OBJ = $(SRC:%.c=%.o)
 NAME = holberton
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 #Rules
 all: $(OBJ) 
-	$(CC) $? -o $(NAME)
+	$(CC) $(SRC) -o $(NAME)
 
 $(OBJ): %.o: %.c
-	$(CC) -c $(CFLAGS) $< -o $@
 
 re: oclean all
 

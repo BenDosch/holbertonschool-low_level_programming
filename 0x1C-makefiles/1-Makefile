@@ -3,7 +3,7 @@
 #Variables
 
 CC = gcc
-SRC = $(wildcard *.c)
+SRC := $(wildcard *.c)
 
 #Rules
 all: $(SRC)
