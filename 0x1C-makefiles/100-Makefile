@@ -12,7 +12,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic -g -c
 
 #Rules
 all: m.h
-	$(CC) $(SRC) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 re: oclean all
 
