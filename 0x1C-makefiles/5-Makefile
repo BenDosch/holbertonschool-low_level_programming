@@ -1,0 +1,31 @@
+#Simple makefile
+
+#Variables
+
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = main.o holberton.o
+NAME = holberton
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+#Rules
+all: $(OBJ) 
+	$(CC) $? -o $(NAME)
+
+$(OBJ): %.o: %.c
+	$(CC) -c $(CFLAGS) $< -o $@
+
+re: oclean all
+
+
+#Cleaners
+
+clean:
+	$(RM) *~ holberton
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+	

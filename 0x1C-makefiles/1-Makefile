@@ -1,0 +1,10 @@
+#Simple makefile
+
+#Variables
+
+CC = gcc
+SRC = $(wildcard *.c)
+
+#Rules
+all: $(SRC)
+	$(CC) $? -o holberton

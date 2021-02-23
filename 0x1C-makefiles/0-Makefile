@@ -1,0 +1,7 @@
+#Simple makefile
+
+#Rules
+all: holberton
+
+holberton: main.c holberton.c
+	gcc main.c holberton.c -o holberton

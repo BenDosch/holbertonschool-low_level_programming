@@ -1,0 +1,15 @@
+#Simple makefile
+
+#Variables
+
+CC = gcc
+SRC = main.c holberton.c
+OBJ = main.o holberton.o
+NAME = holberton
+
+#Rules
+all: $(OBJ) 
+	$(CC) $? -o $(NAME)
+
+$(OBJ): %.o: %.c
+	$(CC) -c $< -o $@
