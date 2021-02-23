@@ -15,11 +15,6 @@ all: $(OBJ)
 
 $(OBJ): %.o: %.c
 
-re: oclean all
-
-
-#Cleaners
-
 clean:
 	$(RM) *~ $(NAME)
 
@@ -28,3 +23,4 @@ oclean:
 
 fclean: clean oclean
 	
+re: oclean all
