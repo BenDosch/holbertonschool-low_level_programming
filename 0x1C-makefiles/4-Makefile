@@ -11,7 +11,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 
 #Rules
 all: $(OBJ) 
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 $(OBJ): %.o: %.c
 
