@@ -19,7 +19,7 @@ re: oclean all
 #Cleaners
 
 clean:
-	$(RM) *~ holberton
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
