@@ -3,8 +3,8 @@
 #Variables
 
 CC = gcc
-SRC = $(wildcard *.c)
-OBJ = main.o holberton.o
+SRC = main.c holberton.c
+OBJ = $(SRC:%.c=%.o)
 NAME = holberton
 CFLAGS = -Wall -Werror -Wextra -pedantic -g -c
 
