@@ -6,7 +6,7 @@ CC = gcc
 SRC = main.c holberton.c
 OBJ = $(SRC:%.c=%.o)
 NAME = holberton
-CFLAGS = -Wall -Werror -Wextra -pedantic -g -M
+CFLAGS = -Wall -Werror -Wextra -pedantic -g -M -c
 
 .PHONY: all re clean oclean fclean
 
