@@ -25,14 +25,15 @@ int recurse_binary(int *array, size_t size, int value, size_t offset)
 			printf(", %d", array[i]);
 		printf("\n");
 		M = ((L + R) / 2);
-		if (L == R && array[L] == value)
+		if (array[L] == value && L == R)
 			return (R + offset);
 		else if (L == R)
 			return (-1);
 		else if (array[M] == value)
 			return (recurse_binary(array, (M + 1), value, offset));
 		else if (array[M] < value)
-			return (recurse_binary((array + (((int)M) + 1)), (size - (M + 1)), value, (offset + M + 1)));
+			return (recurse_binary((array + (((int)M) + 1)),
+					(size - (M + 1)), value, (offset + M + 1)));
 		else if (array[M] > value)
 			return (recurse_binary(array, M, value, offset));
 	}
