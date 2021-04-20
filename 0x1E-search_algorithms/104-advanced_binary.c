@@ -19,7 +19,6 @@ int recurse_binary(int *array, size_t size, int value, size_t offset)
 
 	if (array != NULL)
 	{
-		printf("offset: %lu   :", offset);
 		printf("Searching in array: %d", array[L]);
 		for (i = L + 1; i <= R; i++)
 			printf(", %d", array[i]);
