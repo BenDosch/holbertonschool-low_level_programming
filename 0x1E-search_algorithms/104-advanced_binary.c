@@ -25,7 +25,7 @@ int recurse_binary(int *array, size_t size, int value, size_t offset)
 		printf("\n");
 		M = ((L + R) / 2);
 		if (array[L] == value && (size == 2 || L == R))
-			return (R + offset);
+			return (L + offset);
 		else if (L == R)
 			return (-1);
 		else if (array[M] == value)
