@@ -34,7 +34,7 @@ int recurse_binary(int *array, size_t size, int value, size_t offset)
 			return (recurse_binary((array + (((int)M) + 1)),
 					(size - (M + 1)), value, (offset + M + 1)));
 		else if (array[M] > value)
-			return (recurse_binary(array, M, value, offset));
+			return (recurse_binary(array, (M + 1), value, offset));
 	}
 	return (-1);
 }
